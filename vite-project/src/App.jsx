@@ -1,18 +1,43 @@
 import CabeceraCV from "./components/cabeceraCV.jsx";
-import Perfil from "./components/perfil.jsx";
 import Educacion from "./components/educacion.jsx";
 import Experiencia from "./components/experiencia.jsx";
-import "./App.css";
+import Perfil from "./components/perfil.jsx";
 
-function App() {
+export default function App() {
+  const datosUsuario = {
+    nombre: "Miguel Ángel Castilla Bedoya",
+    profesion: "Tecnólogo en Análisis y Desarrollo de Software"
+  };
+
+  const experiencias = [
+    {
+      id: 1,
+      cargo: "Practicante de Desarrollo",
+      empresa: "SENA",
+      periodo: "2024",
+      descripcion: "Apoyo en desarrollo básico de interfaces y pruebas de software."
+    },
+    {
+      id: 2,
+      cargo: "Proyecto Académico",
+      empresa: "SENA",
+      periodo: "2023",
+      descripcion: "Desarrollo de aplicaciones web sencillas usando HTML, CSS y JavaScript."
+    }
+  ];
+
   return (
-    <div className="cv-container">
-      <CabeceraCV />
+    <main>
+      <CabeceraCV 
+        nombre={datosUsuario.nombre}
+        profesion={datosUsuario.profesion}
+      />
+
       <Perfil />
+
       <Educacion />
-      <Experiencia />
-    </div>
+
+      <Experiencia experiencias={experiencias} />
+    </main>
   );
 }
-
-export default App;
