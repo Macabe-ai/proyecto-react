@@ -5,7 +5,7 @@ export default function Educacion() {
       <ul>
         <li>
           <strong>Bachillerato</strong> -
-         <strong>Media Técnica</strong> - Sistemas (Sena Pedregal) (2022-2024)
+         <strong>Media Técnica</strong> - Sistema (Sena Pedregal) (2022-2024)
         </li>
       </ul>
     </section>
