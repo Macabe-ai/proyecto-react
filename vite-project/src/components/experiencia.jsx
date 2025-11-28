@@ -7,7 +7,7 @@ export default function Experiencia() {
           <strong>Media Técnica</strong> - Sistemas (2022-2024)
         </li>
         <li>
-          <strong>Tecnología Analisis y Desarrollo de Software</strong> - SENA (2020-2022)
+          <strong>Tecnología Analísis y Desarrollo de Software</strong> - SENA (2020-2022)
         </li>
       </ul>
     </section>
