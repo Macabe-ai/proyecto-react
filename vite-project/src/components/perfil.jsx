@@ -1,10 +1,11 @@
 export default function Perfil() {
+  const resumen = 
+    "Aprendiz de Análisis y Desarrollo de Software con conocimientos en desarrollo web. Me caracterizo por aprender rápido, trabajar en equipo y mantener una actitud proactiva mientras fortalezco mis habilidades técnicas.";
+
   return (
-    <section>
-      <h3>Perfil</h3>
-      <p>
-        Tecnologo en Analísis y Desarrollo de software con experiencia en desarrollo web y móvil, apasionado por la tecnología.
-      </p>
+    <section className="cv-section">
+      <h3>Perfil Profesional</h3>
+      <p>{resumen}</p>
     </section>
   );
 }
