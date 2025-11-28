@@ -7,7 +7,7 @@ export default function CabeceraCV() {
         className="profile-pic"
       />
 
-      <h1 className="cv-name">Miguel Ángel Castilla Bedoya</h1>
+      <h1 className="cv-name">Miguel Ángel Castilla Bedoya - </h1>
       <h2 className="cv-title">Analista y Desarrollador de Software</h2>
 
       <div className="cv-contact">
