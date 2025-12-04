@@ -1,7 +1,19 @@
-import CabeceraCV from "./components/cabeceraCV.jsx";
-import Educacion from "./components/educacion.jsx";
-import Experiencia from "./components/experiencia.jsx";
-import Perfil from "./components/perfil.jsx";
+import { useState } from "react";
+import ToggleHabilidades from "./components/ToggleHabilidades.jsx";
+import Habilidades from "./components/habilidades.jsx";
+
+import CabeceraCV from "./components/CabeceraCV.jsx";
+import Educacion from "./components/Educacion.jsx";
+import Experiencia from "./components/Experiencia.jsx";
+import Perfil from "./components/Perfil.jsx";
+
+import StackTecnologias from "./components/StackTecnologias.jsx";
+import ToggleHabilidades from "./components/ToggleHabilidades.jsx";
+import FormularioTecnologia from "./components/FormularioTecnologia.jsx";
+import Habilidades from "./components/habilidades.jsx";
+
+const tecnologiasIniciales = ["HTML", "CSS", "JavaScript", "React"];
+const habilidadesIniciales = ["Trabajo en equipo", "Comunicación", "Aprendizaje rápido"];
 
 export default function App() {
   const datosUsuario = {
@@ -15,29 +27,33 @@ export default function App() {
       cargo: "Practicante de Desarrollo",
       empresa: "SENA",
       periodo: "2024",
-      descripcion: "Apoyo en desarrollo básico de interfaces y pruebas de software."
-    },
-    {
-      id: 2,
-      cargo: "Proyecto Académico",
-      empresa: "SENA",
-      periodo: "2023",
-      descripcion: "Desarrollo de aplicaciones web sencillas usando HTML, CSS y JavaScript."
+      descripcion: "Apoyo en desarrollo básico de interfaces y pruebas."
     }
   ];
 
+  const [tecnologias, setTecnologias] = useState(tecnologiasIniciales);
+  const [mostrarHabilidades, setMostrarHabilidades] = useState(true);
+
+  const agregarTecnologia = (nuevaTec) => {
+    if (!nuevaTec.trim()) return;
+    if (tecnologias.includes(nuevaTec)) return;
+    setTecnologias((prev) => [...prev, nuevaTec]);
+  };
+
   return (
-    <main>
-      <CabeceraCV 
-        nombre={datosUsuario.nombre}
-        profesion={datosUsuario.profesion}
-      />
+    <main className="cv-container">
+      <CabeceraCV nombre={datosUsuario.nombre} profesion={datosUsuario.profesion} />
 
       <Perfil />
-
       <Educacion />
-
       <Experiencia experiencias={experiencias} />
+
+      <FormularioTecnologia agregarTecnologia={agregarTecnologia} />
+      <StackTecnologias tecnologias={tecnologias} />
+
+      <ToggleHabilidades visible={mostrarHabilidades} setVisible={setMostrarHabilidades} />
+
+      {mostrarHabilidades && <Habilidades habilidades={habilidadesIniciales} />}
     </main>
   );
 }
