@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTracker - Dashboard UI</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app-layout">
+        
+        <nav class="sidebar">
+            <div class="logo">FitTracker</div>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Entrenamientos</a></li>
+                <li><a href="#">Progreso</a></li>
+                <li><a href="#">Ajustes</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            
+            <header class="top-bar">
+                <h1>Dashboard de Actividad</h1>
+                <div class="user-profile">
+                    <span>Hola, Aprendiz 👋</span>
+                    <img src="assets/images/profile-placeholder.jpg" alt="Perfil">
+                </div>
+            </header>
+
+            <section id="dashboard-summary">
+                
+                <article class="metric-card calories-card">
+                    <p class="card-title">Calorías Quemadas</p>
+                    <div class="card-data">
+                        <span class="value">1,850</span>
+                        <span class="unit">kcal</span>
+                    </div>
+                </article>
+
+                <article class="metric-card steps-card">
+                    <p class="card-title">Pasos Diarios</p>
+                    <div class="card-data">
+                        <span class="value">9,200</span>
+                        <span class="unit">pasos</span>
+                    </div>
+                </article>
+
+                <article class="metric-card duration-card">
+                    <p class="card-title">Tiempo Activo</p>
+                    <div class="card-data">
+                        <span class="value">75</span>
+                        <span class="unit">min</span>
+                    </div>
+                </article>
+
+            </section>
+            
+            <section id="workout-list">
+                <h2>Mis Últimos Entrenamientos</h2>
+                <div class="workout-item">
+                    <span>Rutina de Pecho y Tríceps</span>
+                    <span class="date">Ayer, 18:00</span>
+                </div>
+                <div class="workout-item">
+                    <span>Cardio y Abdominales</span>
+                    <span class="date">Martes, 07:30</span>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2023 FitTracker UI - Maquetación GA1-220501096-03-AA1-EV09</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
